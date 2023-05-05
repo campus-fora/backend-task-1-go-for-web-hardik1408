@@ -15,7 +15,6 @@ func main() {
 	}
 	defer db.Close()
 
-	// Prepare the INSERT statement
 	stmt, err := db.Prepare("INSERT INTO data(id,input) VALUES(name,email)")
 	if err != nil {
 		log.Fatal(err)
